@@ -15,10 +15,6 @@ var commentSchema = new Schema({
         type: String,
         required: true
     },
-    featured: {
-        type: Boolean,
-        default:false
-    },
     postedBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
@@ -55,6 +51,10 @@ var dishSchema = new Schema({
     description: {
         type: String,
         required: true
+    },
+    featured: {
+        type: Boolean,
+        default:false
     },
     comments:[commentSchema]
 }, {
