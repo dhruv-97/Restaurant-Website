@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('confusionApp')
-.constant("baseURL", "http://localhost:3000/")
+.constant("baseURL", "https://stormy-savannah-73639.herokuapp.com/")
 .factory('menuFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
         return $resource(baseURL + "dishes/:id", null, {
